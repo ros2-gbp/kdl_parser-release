@@ -2,6 +2,11 @@
 Changelog for package kdl_parser_py
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.1 (2018-06-26)
+------------------
+* point to the source and bugtracker used in ros2 (`#3 <https://github.com/ros2/kdl_parser/issues/3>`_)
+* Contributors: Mikael Arguedas
+
 1.12.10 (2017-05-17)
 --------------------
 
