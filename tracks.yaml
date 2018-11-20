@@ -1,3 +1,4 @@
+release_repo_url: git@github.com:ros2-gbp/kdl_parser-release
 tracks:
   ardent:
     actions:
