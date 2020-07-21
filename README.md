@@ -1,3 +1,29 @@
+## kdl_parser (eloquent) - 2.2.1-1
+
+The packages in the `kdl_parser` repository were released into the `eloquent` distro by running `/usr/bin/bloom-release -r eloquent kdl_parser` on `Tue, 21 Jul 2020 20:16:56 -0000`
+
+The `kdl_parser` package was released.
+
+These packages were explicitly ignored:
+- `kdl_parser_py`
+
+Version of package(s) in repository `kdl_parser`:
+
+- upstream repository: https://github.com/ros/kdl_parser.git
+- release repository: https://github.com/ros2-gbp/kdl_parser-release.git
+- rosdistro version: `2.2.0-1`
+- old version: `2.2.0-1`
+- new version: `2.2.1-1`
+
+Versions of tools used:
+
+- bloom version: `0.9.7`
+- catkin_pkg version: `0.4.22`
+- rosdep version: `0.19.0`
+- rosdistro version: `0.8.2`
+- vcstools version: `0.1.42`
+
+
 ## kdl_parser (dashing) - 2.2.1-1
 
 The packages in the `kdl_parser` repository were released into the `dashing` distro by running `/usr/bin/bloom-release -r dashing kdl_parser` on `Tue, 21 Jul 2020 20:14:41 -0000`
