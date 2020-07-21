@@ -2,19 +2,13 @@
 Changelog for package kdl_parser
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2.4.0 (2020-05-26)
+2.2.1 (2020-07-21)
 ------------------
-* Deprecate treeFromXml (`#8 <https://github.com/ros2/kdl_parser/issues/8>`_)
-* Contributors: Dan Rose
-
-2.3.0 (2020-04-29)
-------------------
-* export targets in a addition to include directories / libraries (`#6 <https://github.com/ros2/kdl_parser/issues/6>`_)
-* code style only: wrap after open parenthesis if not in one line (`#5 <https://github.com/ros2/kdl_parser/issues/5>`_)
-* Contributors: Dirk Thomas
+* Remove unused find_library call (`#41 <https://github.com/ros/kdl_parser/issues/41>`_)
+* Contributors: Michael Carroll
 
 2.2.0 (2018-11-20)
-------------------
+-----------
 * Fix up missing link tags in some XML files. (`#15 <https://github.com/ros2/kdl_parser/issues/15>`_)
 * Contributors: Chris Lalancette
 
