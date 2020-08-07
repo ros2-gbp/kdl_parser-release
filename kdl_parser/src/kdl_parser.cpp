@@ -86,7 +86,8 @@ KDL::Joint toKdl(urdf::JointSharedPtr jnt)
         return KDL::Joint(jnt->name, F_parent_jnt.p, F_parent_jnt.M * axis, KDL::Joint::TransAxis);
       }
     default: {
-        fprintf(stderr, "Converting unknown joint type of joint '%s' into a fixed joint\n",
+        fprintf(
+          stderr, "Converting unknown joint type of joint '%s' into a fixed joint\n",
           jnt->name.c_str());
         return KDL::Joint(jnt->name, KDL::Joint::None);
       }
@@ -159,9 +160,11 @@ bool addChildrenToTree(urdf::LinkConstSharedPtr root, KDL::Tree & tree)
 
 bool treeFromFile(const std::string & file, KDL::Tree & tree)
 {
-  TiXmlDocument urdf_xml;
-  urdf_xml.LoadFile(file);
-  return treeFromXml(&urdf_xml, tree);
+  std::ifstream t(file);
+  std::stringstream buffer;
+  buffer << t.rdbuf();
+
+  return treeFromString(buffer.str(), tree);
 }
 
 bool treeFromParam(const std::string & param, KDL::Tree & tree)
@@ -180,19 +183,19 @@ bool treeFromParam(const std::string & param, KDL::Tree & tree)
 
 bool treeFromString(const std::string & xml, KDL::Tree & tree)
 {
-  TiXmlDocument urdf_xml;
-  urdf_xml.Parse(xml.c_str());
-  return treeFromXml(&urdf_xml, tree);
-}
-
-bool treeFromXml(TiXmlDocument * xml_doc, KDL::Tree & tree)
-{
   urdf::Model robot_model;
-  if (!robot_model.initXml(xml_doc)) {
+  if (!robot_model.initString(xml.c_str())) {
     fprintf(stderr, "Could not generate robot model\n");
     return false;
   }
   return treeFromUrdfModel(robot_model, tree);
+}
+
+bool treeFromXml(TiXmlDocument * xml_doc, KDL::Tree & tree)
+{
+  std::stringstream ss;
+  ss << *xml_doc;
+  return treeFromString(ss.str(), tree);
 }
 
 
@@ -206,7 +209,8 @@ bool treeFromUrdfModel(const urdf::ModelInterface & robot_model, KDL::Tree & tre
 
   // warn if root link has inertia. KDL does not support this
   if (robot_model.getRoot()->inertial) {
-    fprintf(stderr, "The root link %s has an inertia specified in the URDF, but KDL does not "
+    fprintf(
+      stderr, "The root link %s has an inertia specified in the URDF, but KDL does not "
       "support a root link with an inertia.  As a workaround, you can add an extra "
       "dummy link to your URDF.\n", robot_model.getRoot()->name.c_str());
   }
