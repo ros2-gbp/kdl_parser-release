@@ -1,1 +1,1 @@
-{"base": "2146b14", "parent": "debian/rolling/kdl_parser", "previous": "beea0cb", "trim": "", "trimbase": ""}
+{"base": "0fd0f92", "parent": "debian/galactic/kdl_parser", "previous": "261d2b4", "trim": "", "trimbase": ""}
