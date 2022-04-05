@@ -1,3 +1,29 @@
+## kdl_parser (rolling) - 2.6.2-1
+
+The packages in the `kdl_parser` repository were released into the `rolling` distro by running `/home/parallels/.local/bin/bloom-release -r rolling kdl_parser` on `Tue, 05 Apr 2022 21:36:14 -0000`
+
+The `kdl_parser` package was released.
+
+These packages were explicitly ignored:
+- `kdl_parser_py`
+
+Version of package(s) in repository `kdl_parser`:
+
+- upstream repository: https://github.com/ros/kdl_parser.git
+- release repository: https://github.com/ros2-gbp/kdl_parser-release.git
+- rosdistro version: `2.6.1-2`
+- old version: `2.6.1-2`
+- new version: `2.6.2-1`
+
+Versions of tools used:
+
+- bloom version: `0.10.7`
+- catkin_pkg version: `0.4.24`
+- rosdep version: `0.21.0`
+- rosdistro version: `0.8.3`
+- vcstools version: `0.1.42`
+
+
 ## kdl_parser (rolling) - 2.6.1-1
 
 The packages in the `kdl_parser` repository were released into the `rolling` distro by running `/usr/bin/bloom-release -r rolling kdl_parser` on `Fri, 14 Jan 2022 18:24:55 -0000`
