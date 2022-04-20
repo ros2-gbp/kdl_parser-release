@@ -1,1 +1,1 @@
-{"base": "ec252cd", "parent": "debian/rolling/kdl_parser", "previous": "7d9fe02", "trim": "", "trimbase": ""}
+{"base": "32c0c20", "parent": "debian/humble/kdl_parser", "previous": "d0a631e", "trim": "", "trimbase": ""}
