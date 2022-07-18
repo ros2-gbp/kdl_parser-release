@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.5)
 project(kdl_parser)
 
 find_package(ament_cmake_ros REQUIRED)
+find_package(orocos_kdl_vendor REQUIRED)
 find_package(orocos_kdl REQUIRED)
 find_package(urdf REQUIRED)
 find_package(urdfdom_headers REQUIRED)
@@ -19,7 +20,6 @@ add_library(
 target_include_directories(${PROJECT_NAME} PUBLIC
   "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
   "$<INSTALL_INTERFACE:include/${PROJECT_NAME}>"
-  "${orocos_kdl_INCLUDE_DIRS}"
 )
 target_link_libraries(${PROJECT_NAME} PUBLIC
   orocos-kdl
@@ -42,12 +42,10 @@ install(DIRECTORY include/ DESTINATION include/${PROJECT_NAME})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
-  # TODO(clalancette): we have to disable copyright checking until
-  # https://github.com/ament/ament_lint/issues/75 is resolved.
-  set(ament_cmake_copyright_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
 
+ament_export_dependencies(orocos_kdl_vendor)
 ament_export_dependencies(orocos_kdl)
 ament_export_dependencies(rcutils)
 ament_export_dependencies(urdfdom_headers)
