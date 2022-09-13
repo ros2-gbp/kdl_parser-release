@@ -1,36 +1,30 @@
-/*********************************************************************
-* Software License Agreement (BSD License)
-*
-*  Copyright (c) 2008, Willow Garage, Inc.
-*  All rights reserved.
-*
-*  Redistribution and use in source and binary forms, with or without
-*  modification, are permitted provided that the following conditions
-*  are met:
-*
-*   * Redistributions of source code must retain the above copyright
-*     notice, this list of conditions and the following disclaimer.
-*   * Redistributions in binary form must reproduce the above
-*     copyright notice, this list of conditions and the following
-*     disclaimer in the documentation and/or other materials provided
-*     with the distribution.
-*   * Neither the name of the Willow Garage nor the names of its
-*     contributors may be used to endorse or promote products derived
-*     from this software without specific prior written permission.
-*
-*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-*  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-*  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
-*  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
-*  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
-*  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
-*  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-*  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-*  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
-*  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
-*  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-*  POSSIBILITY OF SUCH DAMAGE.
-*********************************************************************/
+// Copyright (c) 2008, Willow Garage, Inc.
+//
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are met:
+//
+//    * Redistributions of source code must retain the above copyright
+//      notice, this list of conditions and the following disclaimer.
+//
+//    * Redistributions in binary form must reproduce the above copyright
+//      notice, this list of conditions and the following disclaimer in the
+//      documentation and/or other materials provided with the distribution.
+//
+//    * Neither the name of the Willow Garage nor the names of its
+//      contributors may be used to endorse or promote products derived from
+//      this software without specific prior written permission.
+//
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+// AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+// IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+// ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+// LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+// CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+// SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+// INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+// CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+// ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+// POSSIBILITY OF SUCH DAMAGE.
 
 /* Author: Wim Meeussen */
 
@@ -42,6 +36,8 @@
 #include "kdl/frames_io.hpp"
 #include "urdf/model.h"
 #include "urdf/urdfdom_compatibility.h"
+#include "rcutils/logging_macros.h"
+
 
 namespace kdl_parser
 {
@@ -86,9 +82,9 @@ KDL::Joint toKdl(urdf::JointSharedPtr jnt)
         return KDL::Joint(jnt->name, F_parent_jnt.p, F_parent_jnt.M * axis, KDL::Joint::TransAxis);
       }
     default: {
-        fprintf(
-          stderr, "Converting unknown joint type of joint '%s' into a fixed joint\n",
-          jnt->name.c_str());
+        RCUTILS_LOG_WARN_NAMED(
+          "kdl_parser",
+          "Converting unknown joint type of joint '%s' into a fixed joint", jnt->name.c_str());
         return KDL::Joint(jnt->name, KDL::Joint::None);
       }
   }
@@ -130,7 +126,9 @@ KDL::RigidBodyInertia toKdl(urdf::InertialSharedPtr i)
 bool addChildrenToTree(urdf::LinkConstSharedPtr root, KDL::Tree & tree)
 {
   std::vector<urdf::LinkSharedPtr> children = root->child_links;
-  fprintf(stderr, "Link %s had %zu children\n", root->name.c_str(), children.size());
+  RCUTILS_LOG_INFO_NAMED(
+    "kdl_parser",
+    "Link %s had %zu children.", root->name.c_str(), children.size());
 
   // constructs the optional inertia
   KDL::RigidBodyInertia inert(0);
@@ -171,7 +169,7 @@ bool treeFromString(const std::string & xml, KDL::Tree & tree)
 {
   urdf::Model robot_model;
   if (!robot_model.initString(xml.c_str())) {
-    fprintf(stderr, "Could not generate robot model\n");
+    RCUTILS_LOG_ERROR_NAMED("kdl_parser", "Could not generate robot model.");
     return false;
   }
   return treeFromUrdfModel(robot_model, tree);
@@ -187,10 +185,11 @@ bool treeFromUrdfModel(const urdf::ModelInterface & robot_model, KDL::Tree & tre
 
   // warn if root link has inertia. KDL does not support this
   if (robot_model.getRoot()->inertial) {
-    fprintf(
-      stderr, "The root link %s has an inertia specified in the URDF, but KDL does not "
-      "support a root link with an inertia.  As a workaround, you can add an extra "
-      "dummy link to your URDF.\n", robot_model.getRoot()->name.c_str());
+    RCUTILS_LOG_WARN_NAMED(
+      "kdl_parser",
+      "The root link %s has an inertia specified in the URDF, but KDL "
+      "does not support a root link with an inertia.  As a workaround, you can add "
+      "an extra dummy link to your URDF.", robot_model.getRoot()->name.c_str());
   }
 
   //  add all children

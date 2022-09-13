@@ -2,10 +2,24 @@
 Changelog for package kdl_parser
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2.6.3 (2022-08-05)
+2.8.2 (2022-09-13)
 ------------------
-* Use orocos_kdl_vendor and orocos-kdl target (`#69 <https://github.com/ros/kdl_parser/issues/69>`_)
-* Contributors: Scott K Logan
+* Enable the kdl_parser tests in ROS 2 (`#68 <https://github.com/ros/kdl_parser/issues/68>`_)
+* Contributors: Chris Lalancette
+
+2.8.1 (2022-06-24)
+------------------
+* Add in a LICENSE file and fix up copyright headers (`#66 <https://github.com/ros/kdl_parser/issues/66>`_)
+* Use orocos_kdl_vendor and orocos-kdl target (`#64 <https://github.com/ros/kdl_parser/issues/64>`_)
+* Contributors: Chris Lalancette, Scott K Logan
+
+2.8.0 (2022-06-21)
+------------------
+* Use the rcutils logger instead of printf (`#65 <https://github.com/ros/kdl_parser/issues/65>`_)
+* Contributors: Chris Lalancette, yuraSomatic
+
+2.7.0 (2022-05-10)
+------------------
 
 2.6.2 (2022-04-05)
 ------------------
