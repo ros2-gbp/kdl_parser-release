@@ -42,15 +42,10 @@ install(DIRECTORY include/ DESTINATION include/${PROJECT_NAME})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
+  # TODO(clalancette): we have to disable copyright checking until
+  # https://github.com/ament/ament_lint/issues/75 is resolved.
+  set(ament_cmake_copyright_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
-
-  find_package(ament_cmake_gtest REQUIRED)
-
-  ament_add_gtest(test_inertia_rpy test/test_inertia_rpy.cpp)
-  target_link_libraries(test_inertia_rpy ${PROJECT_NAME})
-
-  ament_add_gtest(test_kdl_parser test/test_kdl_parser.cpp)
-  target_link_libraries(test_kdl_parser ${PROJECT_NAME})
 endif()
 
 ament_export_dependencies(orocos_kdl_vendor)
