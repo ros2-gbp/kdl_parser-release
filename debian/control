@@ -1,0 +1,13 @@
+Source: ros-rolling-kdl-parser
+Section: misc
+Priority: optional
+Maintainer: Chris Lalancette <clalancette@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), ros-rolling-ament-cmake-gtest <!nocheck>, ros-rolling-ament-cmake-ros, ros-rolling-ament-lint-auto <!nocheck>, ros-rolling-ament-lint-common <!nocheck>, ros-rolling-orocos-kdl-vendor, ros-rolling-rcutils, ros-rolling-urdf, ros-rolling-urdfdom-headers, ros-rolling-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-rolling-kdl-parser
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-rolling-orocos-kdl-vendor, ros-rolling-rcutils, ros-rolling-urdf, ros-rolling-urdfdom-headers, ros-rolling-ros-workspace
+Description: The Kinematics and Dynamics Library (KDL) defines a tree structure to represent the kinematic and dynamic parameters of a robot mechanism.
+ kdl_parser provides tools to construct a KDL tree from an XML robot representation in URDF.
