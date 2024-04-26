@@ -2,6 +2,9 @@
 Changelog for package kdl_parser
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.12.0 (2024-04-26)
+-------------------
+
 2.11.0 (2023-12-26)
 -------------------
 * Update to C++17. (`#82 <https://github.com/ros/kdl_parser/issues/82>`_)
