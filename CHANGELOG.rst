@@ -2,6 +2,9 @@
 Changelog for package kdl_parser
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.13.0 (2025-04-25)
+-------------------
+
 2.12.1 (2024-08-28)
 -------------------
 * update urdf model header (`#85 <https://github.com/ros/kdl_parser/issues/85>`_)
