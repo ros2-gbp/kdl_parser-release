@@ -1,0 +1,296 @@
+ros-rolling-kdl-parser (3.0.1-1bookworm) bookworm; urgency=high
+
+  * Removed kdl vendor dependency (#90 <https://github.com/ros/kdl_parser//issues/90>)
+  * Contributors: Alejandro Hernández Cordero
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Thu, 16 Oct 2025 22:00:00 -0000
+
+ros-rolling-kdl-parser (3.0.0-1bookworm) bookworm; urgency=high
+
+  * Cmake requirement (#88 <https://github.com/ros/kdl_parser/issues/88>)
+  * Remove kdl_parser_py. (#89 <https://github.com/ros/kdl_parser/issues/89>)
+  * Contributors: Chris Lalancette, mosfet80
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Mon, 28 Jul 2025 22:00:00 -0000
+
+ros-rolling-kdl-parser (2.13.0-1bookworm) bookworm; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Thu, 24 Apr 2025 22:00:00 -0000
+
+ros-rolling-kdl-parser (2.12.1-1bookworm) bookworm; urgency=high
+
+  * update urdf model header (#85 <https://github.com/ros/kdl_parser/issues/85>)
+  * Contributors: Alejandro Hernández Cordero
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Tue, 27 Aug 2024 22:00:00 -0000
+
+ros-rolling-kdl-parser (2.12.0-1bookworm) bookworm; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Thu, 25 Apr 2024 22:00:00 -0000
+
+ros-rolling-kdl-parser (2.11.0-1bookworm) bookworm; urgency=high
+
+  * Update to C++17. (#82 <https://github.com/ros/kdl_parser/issues/82>)
+  * Contributors: Chris Lalancette
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Mon, 25 Dec 2023 23:00:00 -0000
+
+ros-rolling-kdl-parser (2.10.0-1bookworm) bookworm; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Thu, 27 Apr 2023 22:00:00 -0000
+
+ros-rolling-kdl-parser (2.9.0-1bookworm) bookworm; urgency=high
+
+  * Switch some tests to use unique pointers instead of raw pointers. (#74 <https://github.com/ros/kdl_parser/issues/74>)
+  * log link children as DEBUG instead of INFO (#71 <https://github.com/ros/kdl_parser/issues/71>)
+  * Contributors: Chris Lalancette, Joseph Schornak
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Sun, 12 Feb 2023 23:00:00 -0000
+
+ros-rolling-kdl-parser (2.8.2-1bookworm) bookworm; urgency=high
+
+  * Enable the kdl_parser tests in ROS 2 (#68 <https://github.com/ros/kdl_parser/issues/68>)
+  * Contributors: Chris Lalancette
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Mon, 12 Sep 2022 22:00:00 -0000
+
+ros-rolling-kdl-parser (2.8.1-1bookworm) bookworm; urgency=high
+
+  * Add in a LICENSE file and fix up copyright headers (#66 <https://github.com/ros/kdl_parser/issues/66>)
+  * Use orocos_kdl_vendor and orocos-kdl target (#64 <https://github.com/ros/kdl_parser/issues/64>)
+  * Contributors: Chris Lalancette, Scott K Logan
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Thu, 23 Jun 2022 22:00:00 -0000
+
+ros-rolling-kdl-parser (2.8.0-1bookworm) bookworm; urgency=high
+
+  * Use the rcutils logger instead of printf (#65 <https://github.com/ros/kdl_parser/issues/65>)
+  * Contributors: Chris Lalancette, yuraSomatic
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Mon, 20 Jun 2022 22:00:00 -0000
+
+ros-rolling-kdl-parser (2.7.0-1bookworm) bookworm; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Mon, 09 May 2022 22:00:00 -0000
+
+ros-rolling-kdl-parser (2.6.2-1bookworm) bookworm; urgency=high
+
+  * Depend on orocos-kdl vendor packages  (#58 <https://github.com/ros/kdl_parser/issues/58>)
+  * Contributors: Jacob Perron
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Mon, 04 Apr 2022 22:00:00 -0000
+
+ros-rolling-kdl-parser (2.6.1-1bookworm) bookworm; urgency=high
+
+  * Install includes to include/ and misc CMake fixes (#61 <https://github.com/ros/kdl_parser/issues/61>)
+  * Contributors: Shane Loretz
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Thu, 13 Jan 2022 23:00:00 -0000
+
+ros-rolling-kdl-parser (2.6.0-1bookworm) bookworm; urgency=high
+
+  * Update to uncrustify 0.72 (#60 <https://github.com/ros/kdl_parser/issues/60>)
+  * Contributors: Chris Lalancette
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Thu, 16 Dec 2021 23:00:00 -0000
+
+ros-rolling-kdl-parser (2.5.0-1bookworm) bookworm; urgency=high
+
+  * Remove tinyxml dependency from kdl_parser. (#43 <https://github.com/ros/kdl_parser/issues/43>)
+  * Contributors: Chris Lalancette
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Sun, 04 Oct 2020 22:00:00 -0000
+
+ros-rolling-kdl-parser (2.4.1-1bookworm) bookworm; urgency=high
+
+  * Remove unused find_library call (#40 <https://github.com/ros/kdl_parser/issues/40>)
+  * Contributors: Michael Carroll
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Thu, 06 Aug 2020 22:00:00 -0000
+
+ros-rolling-kdl-parser (2.4.0-1bookworm) bookworm; urgency=high
+
+  * Deprecate treeFromXml (#8 <https://github.com/ros2/kdl_parser/issues/8>)
+  * Contributors: Dan Rose
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Mon, 25 May 2020 22:00:00 -0000
+
+ros-rolling-kdl-parser (2.3.0-1bookworm) bookworm; urgency=high
+
+  * export targets in a addition to include directories / libraries (#6 <https://github.com/ros2/kdl_parser/issues/6>)
+  * code style only: wrap after open parenthesis if not in one line (#5 <https://github.com/ros2/kdl_parser/issues/5>)
+  * Contributors: Dirk Thomas
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Tue, 28 Apr 2020 22:00:00 -0000
+
+ros-rolling-kdl-parser (2.2.0-1bookworm) bookworm; urgency=high
+
+  * Fix up missing link tags in some XML files. (#15 <https://github.com/ros2/kdl_parser/issues/15>)
+  * Contributors: Chris Lalancette
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Mon, 19 Nov 2018 23:00:00 -0000
+
+ros-rolling-kdl-parser (2.1.0-1bookworm) bookworm; urgency=high
+
+  * point to the source and bugtracker used in ros2 (#3 <https://github.com/ros2/kdl_parser/issues/3>)
+  * Contributors: Mikael Arguedas
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Mon, 25 Jun 2018 22:00:00 -0000
+
+ros-rolling-kdl-parser (1.12.10-1bookworm) bookworm; urgency=high
+
+  * Use result of find_package(orocos_kdl) properly (#200 <https://github.com/ros/robot_model/issues/200>)
+    orocos_kdl_LIBRARY_DIRS was not set
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Tue, 16 May 2017 22:00:00 -0000
+
+ros-rolling-kdl-parser (1.12.9-1bookworm) bookworm; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Tue, 25 Apr 2017 22:00:00 -0000
+
+ros-rolling-kdl-parser (1.12.8-1bookworm) bookworm; urgency=high
+
+  * add Chris and Shane as maintainers (#184 <https://github.com/ros/robot_model/issues/184>)
+  * fix missed mandatory -std=c++11 flag (#181 <https://github.com/ros/robot_model/issues/181>)
+    collada_parser,kdl_parser,urdf: add c++11 flag,
+    collada_parser: replace typeof with ansi __typeof__
+    builded/tested on gentoo
+    Thanks den4ix for the contribution!
+  * Contributors: Denis Romanchuk, William Woodall
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Sun, 26 Mar 2017 22:00:00 -0000
+
+ros-rolling-kdl-parser (1.12.7-1bookworm) bookworm; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Wed, 25 Jan 2017 23:00:00 -0000
+
+ros-rolling-kdl-parser (1.12.6-1bookworm) bookworm; urgency=high
+
+  * Now using ``urdf::*ShredPtr`` instead of ``boost::shared_ptr`` (#144 <https://github.com/ros/robot_model/issues/144>)
+  * Contributors: Jochen Sprickerhof
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Tue, 03 Jan 2017 23:00:00 -0000
+
+ros-rolling-kdl-parser (1.12.5-1bookworm) bookworm; urgency=high
+
+  * fix segfault: safely handle empty robot model (#154 <https://github.com/ros/robot_model/issues/154>)
+  * Contributors: Robert Haschke
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Wed, 26 Oct 2016 22:00:00 -0000
+
+ros-rolling-kdl-parser (1.12.4-1bookworm) bookworm; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Mon, 22 Aug 2016 22:00:00 -0000
+
+ros-rolling-kdl-parser (1.12.3-1bookworm) bookworm; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Thu, 09 Jun 2016 22:00:00 -0000
+
+ros-rolling-kdl-parser (1.12.2-1bookworm) bookworm; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Mon, 11 Apr 2016 22:00:00 -0000
+
+ros-rolling-kdl-parser (1.12.1-1bookworm) bookworm; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Sat, 09 Apr 2016 22:00:00 -0000
+
+ros-rolling-kdl-parser (1.11.8-1bookworm) bookworm; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Thu, 10 Sep 2015 22:00:00 -0000
+
+ros-rolling-kdl-parser (1.11.7-1bookworm) bookworm; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Tue, 21 Apr 2015 22:00:00 -0000
+
+ros-rolling-kdl-parser (1.11.6-1bookworm) bookworm; urgency=high
+
+  * add version dependency on orocos_kdl >= 1.3.0
+  * Contributors: William Woodall
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Sat, 29 Nov 2014 23:00:00 -0000
+
+ros-rolling-kdl-parser (1.11.5-1bookworm) bookworm; urgency=high
+
+  * Update KDL SegmentMap interface to optionally use shared pointers
+    The KDL Tree API optionally uses shared pointers on platforms where
+    the STL containers don't support incomplete types.
+  * Contributors: Brian Jensen
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Wed, 23 Jul 2014 22:00:00 -0000
+
+ros-rolling-kdl-parser (1.11.4-1bookworm) bookworm; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Sun, 06 Jul 2014 22:00:00 -0000
+
+ros-rolling-kdl-parser (1.11.3-1bookworm) bookworm; urgency=high
+
+  * kdl_parser: Adding kdl library explicitly so that dependees can find it
+  * Contributors: Jonathan Bohren
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Mon, 23 Jun 2014 22:00:00 -0000
+
+ros-rolling-kdl-parser (1.11.2-1bookworm) bookworm; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Fri, 21 Mar 2014 23:00:00 -0000
+
+ros-rolling-kdl-parser (1.11.1-1bookworm) bookworm; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Wed, 19 Mar 2014 23:00:00 -0000
+
+ros-rolling-kdl-parser (1.11.0-1bookworm) bookworm; urgency=high
+
+  * fix test at kdl_parser
+  * Contributors: YoheiKakiuchi
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Thu, 20 Feb 2014 23:00:00 -0000
+
+ros-rolling-kdl-parser (1.10.18-1bookworm) bookworm; urgency=high
+
+  * add DEPENDS for kdl_parser
+  * Contributors: Ioan Sucan
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Tue, 03 Dec 2013 23:00:00 -0000
+
+ros-rolling-kdl-parser (1.10.16-1bookworm) bookworm; urgency=high
+
+  * check for CATKIN_ENABLE_TESTING
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Sun, 17 Nov 2013 23:00:00 -0000
+
+ros-rolling-kdl-parser (1.10.15-1bookworm) bookworm; urgency=high
+
+  * fix #30 <https://github.com/ros/robot_model/issues/30>
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Fri, 16 Aug 2013 22:00:00 -0000
+
+
