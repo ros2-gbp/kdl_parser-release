@@ -303,5 +303,4 @@ tracks:
     ros_distro: rolling
     vcs_type: git
     vcs_uri: https://github.com/ros/kdl_parser.git
-    version: 3.0.1
-    version_saved: :{auto}
+    version: :{auto}
