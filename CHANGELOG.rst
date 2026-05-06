@@ -2,6 +2,9 @@
 Changelog for package kdl_parser
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+3.1.0 (2026-05-06)
+------------------
+
 3.0.1 (2025-10-17)
 ------------------
 * Removed kdl vendor dependency (`#90 <https://github.com/ros/kdl_parser//issues/90>`_)
